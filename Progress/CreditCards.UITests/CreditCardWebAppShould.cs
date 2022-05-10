@@ -50,16 +50,21 @@ namespace CreditCards.UITests
             using (IWebDriver driver = new ChromeDriver())
             {
                 driver.Navigate().GoToUrl(HomeUrl);
+                IWebElement generationTokenElement = driver.FindElement(By.Id("GenerationToken"));
+                string initialToken = generationTokenElement.Text;
                 DemoHelper.Pause();
+
                 driver.Navigate().GoToUrl(AboutUrl);
                 DemoHelper.Pause();
+                
                 driver.Navigate().Back();
                 DemoHelper.Pause();
 
                 Assert.Equal(HomeTitle, driver.Title);
                 Assert.Equal(HomeUrl, driver.Url);
 
-                // TODO: Assert that the page was reloaded
+                string reloadedToken = driver.FindElement(By.Id("GenerationToken")).Text;
+                Assert.NotEqual(initialToken, reloadedToken);
             }
         }
 
@@ -73,6 +78,7 @@ namespace CreditCards.UITests
                 DemoHelper.Pause();
 
                 driver.Navigate().GoToUrl(HomeUrl);
+                string initialToken = driver.FindElement(By.Id("GenerationToken")).Text;
                 DemoHelper.Pause();
 
                 driver.Navigate().Back();
@@ -84,7 +90,24 @@ namespace CreditCards.UITests
                 Assert.Equal(HomeTitle, driver.Title);
                 Assert.Equal(HomeUrl, driver.Url);
 
-                // TODO: Assert that the page was reloaded
+                string reloadedToken = driver.FindElement(By.Id("GenerationToken")).Text;
+                Assert.NotEqual(initialToken, reloadedToken);
+            }
+        }
+        [Fact]
+        public void DisplayProductsAndRates()
+        {
+            using (IWebDriver driver = new ChromeDriver())
+            {
+                driver.Navigate().GoToUrl(HomeUrl);
+                DemoHelper.Pause();
+
+                IWebElement firstTableCell = driver.FindElement(By.TagName("td"));
+                string firstProduct = firstTableCell.Text;
+
+                Assert.Equal("Easy Credit Card", firstProduct);
+
+                //TODO: check rest of product table
             }
         }
     }
