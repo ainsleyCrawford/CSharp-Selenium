@@ -112,7 +112,7 @@ using Microsoft.AspNetCore.Http;
             ");
             EndContext();
             BeginContext(708, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a7070182996243cfa37d4828fc3208f0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b1271a214e2d49d6a02b759d4dc02fd1", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -132,7 +132,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n            <div class=\"carousel-caption\" role=\"option\">\r\n                <p>\r\n                    New low rate\r\n                    ");
             EndContext();
             BeginContext(914, 115, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89d43c5836f5477ea1427335c369c3e8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05a99356fa724fad8eec175b7f5c2757", async() => {
                 BeginContext(1015, 10, true);
                 WriteLiteral("Apply Now!");
                 EndContext();
@@ -160,7 +160,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"item\">\r\n            ");
             EndContext();
             BeginContext(1129, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f4a2120f708d464b9025a0f155ee5be6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "01ca762fbb3d48b9a8c39b111f831296", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -180,7 +180,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n            <div class=\"carousel-caption\" role=\"option\">\r\n                <p>\r\n                    Easy application process\r\n                    ");
             EndContext();
             BeginContext(1353, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4fe19edbc29042d39d8ae6c9a3b585d6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c0287e8c19074cedbdd68ec0a15d7271", async() => {
                 BeginContext(1434, 16, true);
                 WriteLiteral("Easy: Apply Now!");
                 EndContext();
@@ -207,7 +207,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"item\">\r\n            ");
             EndContext();
             BeginContext(1554, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b711532cb72947e0be480c3fbac256c2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3607c44ec82e4f07883611394d7fadcd", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -227,7 +227,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n            <div class=\"carousel-caption\" role=\"option\">\r\n                <p>\r\n                    Award winning customer service\r\n                    ");
             EndContext();
             BeginContext(1789, 122, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "487664f0f3784544acd5852eddc16634", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32b4a15e828e4b07a33ce2a0cc9cdbac", async() => {
                 BeginContext(1897, 10, true);
                 WriteLiteral("Apply Now!");
                 EndContext();
@@ -288,7 +288,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("td>Gold Credit Card</td>\r\n                <td>17% APR</td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n<div>\r\n    <div>\r\n        <p>Quick links: ");
             EndContext();
             BeginContext(3096, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e84d873fca09442a8cd7a61f9f1c3cfc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "146e3de0627148a7b5b413dbf02b5ce0", async() => {
                 BeginContext(3154, 26, false);
 #line 87 "C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\Views\Home\Index.cshtml"
                                                                             Write(ViewData["RandomGreeting"]);
@@ -354,7 +354,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("</p>\r\n    ");
             EndContext();
             BeginContext(3727, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d5aa70384174fba99e04396fb0187c1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9faaf6d6106949ffba3c93e097263e9a", async() => {
                 BeginContext(3820, 7, true);
                 WriteLiteral("Contact");
                 EndContext();
