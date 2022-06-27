@@ -15,3 +15,5 @@ C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards.UITests\ob
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards.UITests\obj\Debug\CreditCards.UITests.csproj.CopyComplete
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards.UITests\obj\Debug\CreditCards.UITests.dll
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards.UITests\obj\Debug\CreditCards.UITests.pdb
+C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards.UITests\bin\Debug\SeleniumExtras.WaitHelpers.dll
+C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards.UITests\bin\Debug\WebDriver.Support.dll

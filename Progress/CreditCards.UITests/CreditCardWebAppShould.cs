@@ -2,6 +2,7 @@
 using Xunit;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System.Collections.ObjectModel;
 
 namespace CreditCards.UITests
 {
@@ -102,10 +103,18 @@ namespace CreditCards.UITests
                 driver.Navigate().GoToUrl(HomeUrl);
                 DemoHelper.Pause();
 
-                IWebElement firstTableCell = driver.FindElement(By.TagName("td"));
-                string firstProduct = firstTableCell.Text;
+                ReadOnlyCollection<IWebElement> tableCells = driver.FindElements(By.TagName("td"));
 
-                Assert.Equal("Easy Credit Card", firstProduct);
+                Assert.Equal("Easy Credit Card", tableCells[0].Text);
+                Assert.Equal("20% APR", tableCells[1].Text);
+                
+                Assert.Equal("Silver Credit Card", tableCells[2].Text);
+                Assert.Equal("18% APR", tableCells[3].Text);
+                
+                Assert.Equal("Gold Credit Card", tableCells[4].Text);
+                Assert.Equal("17% APR", tableCells[5].Text);
+
+
 
                 //TODO: check rest of product table
             }
