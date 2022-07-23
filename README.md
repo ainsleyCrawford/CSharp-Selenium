@@ -9,14 +9,14 @@ Test framework (NUnit) --> Test code (C#) <--> **POMs** <--> IWebDriver API (NuG
 
 ### POM Benefits
 - Cost
- - Avoid duplication
- - Robust to UI changes
+  - Avoid duplication
+  - Robust to UI changes
 - Readability
- - Highlight test logic (not low-level details)
- - Reduced HTML implementation clutter
+  - Highlight test logic (not low-level details)
+  - Reduced HTML implementation clutter
 - Use of Fundamental .Net types
- - e.g., strings over IWebElements
+  - e.g., strings over IWebElements
 - Abstract away IWebDriver interface
- - i.e., replace `driver.FindElement()`
+  - i.e., replace `driver.FindElement()`
 - Navigation between POMs
- - Each page has a POM
+  - Each page has a POM
