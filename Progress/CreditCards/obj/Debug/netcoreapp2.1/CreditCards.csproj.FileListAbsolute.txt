@@ -37,7 +37,6 @@ C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\creating-automated-browser-test
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\appsettings.json
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\bundleconfig.json
-C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\CreditCards.deps.json
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\CreditCards.runtimeconfig.json
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\CreditCards.runtimeconfig.dev.json
@@ -45,7 +44,6 @@ C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\CreditCards.pdb
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\CreditCards.Views.dll
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\bin\Debug\netcoreapp2.1\CreditCards.Views.pdb
-C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.csprojAssemblyReference.cache
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.RazorAssemblyInfo.cache
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.RazorAssemblyInfo.cs
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.AssemblyInfoInputs.cache
@@ -70,3 +68,7 @@ C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.dll
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.pdb
 C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.csproj.CopyComplete
+C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.csproj.AssemblyReference.cache
+C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.csproj.CoreCompileInputs.cache
+C:\Users\ainsl\Desktop\Portfolio\CSharp Selenium\Progress\CreditCards\obj\Debug\netcoreapp2.1\CreditCards.genruntimeconfig.cache
