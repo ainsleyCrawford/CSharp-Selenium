@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Xunit.Abstractions;
+using CreditCards.UITests.PageObjectModels;
 
 namespace CreditCards.UITests
 {
@@ -25,59 +26,30 @@ namespace CreditCards.UITests
         {
             using (IWebDriver driver = new ChromeDriver())
             {
-                driver.Navigate().GoToUrl(HomeUrl);
-                DemoHelper.Pause();
+                var hP = new HomePage(driver);
+                hP.NavigateTo();
 
-                IWebElement applyLink = driver.FindElement(By.Name("ApplyLowRate"));
-                applyLink.Click();
-                DemoHelper.Pause();
+                ApplicationPage aplP = hP.ClickApplyLowRateLink();
 
-                Assert.Equal("Credit Card Application - Credit Cards", driver.Title);
-                Assert.Equal(ApplyUrl, driver.Url);
+                aplP.EnsurePageLoaded();
             }
         }
 
         [Fact]
-        public void BeIniitiatedFromHomePage_EasyApplication()
+        public void BeInitiatedFromHomePageEasyApplication()
         {
             using (IWebDriver driver = new ChromeDriver())
             {
-                driver.Navigate().GoToUrl(HomeUrl);
-                DemoHelper.Pause();
+                var hP = new HomePage(driver);
+                hP.NavigateTo();
 
-                IWebElement carouselNext = driver.FindElement(By.CssSelector("[data-slide='next']"));
-                carouselNext.Click();
-
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(1));
-                IWebElement applyLink = wait.Until((d) => d.FindElement(By.LinkText("Easy: Apply Now!")));
-                applyLink.Click();
-
-                //IWebElement applyLink = driver.FindElement(By.LinkText("Easy: Apply Now!"));
-                //applyLink.Click();
-                DemoHelper.Pause();
-
-                Assert.Equal("Credit Card Application - Credit Cards", driver.Title);
-                Assert.Equal(ApplyUrl, driver.Url);
-            }
-        }
-
-        [Fact]
-        public void BeInitiatedFromHomePageEasyApplication_Prebuilt_Conditions()
-        {
-            using (IWebDriver driver = new ChromeDriver())
-            {
-                driver.Navigate().GoToUrl(HomeUrl);
                 driver.Manage().Window.Minimize();
-                DemoHelper.Pause();
+                
+                hP.WaitForEasyApplicationCarouselPage();
 
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(11));
-                IWebElement applyLink = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.LinkText("Easy: Apply Now!")));
-                applyLink.Click();
+                ApplicationPage aplP = hP.ClickApplyEasyApplicationLink();
 
-                DemoHelper.Pause();
-
-                Assert.Equal("Credit Card Application - Credit Cards", driver.Title);
-                Assert.Equal(ApplyUrl, driver.Url);
+                aplP.EnsurePageLoaded();
             }
         }
 
@@ -86,22 +58,19 @@ namespace CreditCards.UITests
         {
             using (IWebDriver driver = new ChromeDriver())
             {
+                var hP = new HomePage(driver);
+
                 output.WriteLine($"{DateTime.Now.ToLongTimeString()} Navigating to '{HomeUrl}'");
-                driver.Navigate().GoToUrl(HomeUrl);
+                hP.NavigateTo();
 
                 output.WriteLine($"{DateTime.Now.ToLongTimeString()} Finding element using explicit wait");
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(35));
+                hP.WaitForEasyApplicationCustomerServicePage();
+                //output.WriteLine($"{DateTime.Now.ToLongTimeString()} Element found: Displayed={applyLink.Displayed}; Enabled={applyLink.Enabled}");
 
-                IWebElement applyLink = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.ClassName("customer-service-apply-now")));
-
-                output.WriteLine($"{DateTime.Now.ToLongTimeString()} Element found: Displayed={applyLink.Displayed}; Enabled={applyLink.Enabled}");
                 output.WriteLine($"{DateTime.Now.ToLongTimeString()} Clicking element");
-                applyLink.Click();
+                ApplicationPage aplP = hP.ClickApplyCustomerServiceLink();
 
-                DemoHelper.Pause();
-
-                Assert.Equal("Credit Card Application - Credit Cards", driver.Title);
-                Assert.Equal(ApplyUrl, driver.Url);
+                aplP.EnsurePageLoaded();
             }
         }
 

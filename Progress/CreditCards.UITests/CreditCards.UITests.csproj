@@ -120,6 +120,8 @@
     <Compile Include="CreditCardWebAppShould.cs" />
     <Compile Include="DemoHelper.cs" />
     <Compile Include="JavaScriptExamples.cs" />
+    <Compile Include="PageObjectModels\ApplicationPage.cs" />
+    <Compile Include="PageObjectModels\HomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
