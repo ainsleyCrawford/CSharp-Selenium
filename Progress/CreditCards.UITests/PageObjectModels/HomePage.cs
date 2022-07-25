@@ -56,7 +56,7 @@ namespace CreditCards.UITests.PageObjectModels
         public void WaitForEasyApplicationCarouselPage()
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(11));
-            IWebElement applyLink = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.LinkText("Easy: Apply Now!")));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.LinkText("Easy: Apply Now!")));
         }
 
         public ApplicationPage ClickApplyEasyApplicationLink()
@@ -75,6 +75,18 @@ namespace CreditCards.UITests.PageObjectModels
         public ApplicationPage ClickApplyCustomerServiceLink()
         {
             Driver.FindElement(By.ClassName("customer-service-apply-now")).Click();
+            return new ApplicationPage(Driver);
+        }
+        
+        public ApplicationPage ClickRandomGreetingLink()
+        {
+            Driver.FindElement(By.PartialLinkText("- Apply Now!")).Click();
+            return new ApplicationPage(Driver);
+        }
+        
+        public ApplicationPage ClickRandomGreetingLink_XPath()
+        {
+            Driver.FindElement(By.XPath("//a[text()[contains(.,'- Apply Now!')]]")).Click();
             return new ApplicationPage(Driver);
         }
 
