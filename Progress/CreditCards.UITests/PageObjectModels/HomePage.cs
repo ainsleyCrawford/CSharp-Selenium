@@ -45,6 +45,12 @@ namespace CreditCards.UITests.PageObjectModels
 
         public void ClickLiveChatFooterLink() => Driver.FindElement(By.Id("LiveChat")).Click();
 
+        public AboutPage ClickAboutLink()
+        {
+            Driver.FindElement(By.LinkText("About")).Click();
+            return new AboutPage(Driver);
+        }
+
         public void ClickLearnAboutUsLink() => Driver.FindElement(By.Id("LearnAboutUs")).Click();
 
         public ApplicationPage ClickApplyLowRateLink()

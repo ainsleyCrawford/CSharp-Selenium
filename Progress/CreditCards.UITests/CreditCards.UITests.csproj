@@ -120,6 +120,7 @@
     <Compile Include="CreditCardWebAppShould.cs" />
     <Compile Include="DemoHelper.cs" />
     <Compile Include="JavaScriptExamples.cs" />
+    <Compile Include="PageObjectModels\AboutPage.cs" />
     <Compile Include="PageObjectModels\ApplicationComplete.cs" />
     <Compile Include="PageObjectModels\ApplicationPage.cs" />
     <Compile Include="PageObjectModels\HomePage.cs" />

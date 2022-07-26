@@ -39,8 +39,12 @@ namespace CreditCards.UITests
                 homePage.NavigateTo();
 
                 string initialToken = homePage.GenerationToken;
+                
+                //driver.Navigate().GoToUrl(AboutUrl);
+                var aboutPage = homePage.ClickAboutLink();
+                
+                aboutPage.EnsurePageLoaded();
 
-                driver.Navigate().GoToUrl(AboutUrl);
                 driver.Navigate().Back();
 
                 homePage.EnsurePageLoaded();
@@ -185,7 +189,9 @@ namespace CreditCards.UITests
             using (IWebDriver driver = new ChromeDriver())
             {
                 //TODO: Create About Page POM
-                driver.Navigate().GoToUrl(AboutUrl);
+                //driver.Navigate().GoToUrl(AboutUrl);
+                var aboutPage = new AboutPage(driver);
+                aboutPage.NavigateTo();
 
                 ITakesScreenshot screenShotDriver = (ITakesScreenshot)driver;
 
