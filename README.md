@@ -30,3 +30,17 @@ Test framework (NUnit) --> Test code (C#) <--> **POMs** <--> IWebDriver API (NuG
   - `public void EnsurePageLoaded()`
 - Create reusable "user behaviour" methods
   - `private void EnterApplicationDetails(default params)`
+
+## Good Practices
+- Use POMs for all non-trivial tests
+- Check page is loaded before interacting
+- Element locators
+  - Most reliable
+  - Most simple (e.g. Id)
+- Use configuration files (e.g. servers and ports)
+- Explicit waits > Thread.Sleep
+- Independent test ordering (i.e., test isolation)
+- Execute as part of CI build
+- Usually test features, not visuals
+- Consider browser update management on test machines
+- Test case/data preparation
