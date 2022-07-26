@@ -7,16 +7,16 @@ using System.Linq;
 
 namespace CreditCards.UITests.PageObjectModels
 {
-    class HomePage
+    class HomePage : Page
     {
-        private readonly IWebDriver Driver;
-        private const string PageUrl = "http://localhost:44108/";
-        private const string PageTitle = "Home Page - Credit Cards";
-
         public HomePage(IWebDriver driver)
         {
             Driver = driver;
         }
+
+        protected override string PageUrl => "http://localhost:44108/";
+        protected override string PageTitle => "Home Page - Credit Cards";
+        protected override string DesiredPage => "Home";
 
         public ReadOnlyCollection<(string name, string interestRate)> Products
         {
@@ -26,7 +26,7 @@ namespace CreditCards.UITests.PageObjectModels
 
                 var productCells = Driver.FindElements(By.TagName("td"));
 
-                for (int i = 0; i < productCells.Count; i +=2)
+                for (int i = 0; i < productCells.Count; i += 2)
                 {
                     string name = productCells[i].Text;
                     string interestRate = productCells[i + 1].Text;
@@ -88,32 +88,6 @@ namespace CreditCards.UITests.PageObjectModels
         {
             Driver.FindElement(By.XPath("//a[text()[contains(.,'- Apply Now!')]]")).Click();
             return new ApplicationPage(Driver);
-        }
-
-        public void NavigateTo()
-        {
-            Driver.Navigate().GoToUrl(PageUrl);
-            EnsurePageLoaded();
-        }
-
-        public void EnsurePageLoaded(bool onlyCheckUrlStartsWithExpectedText = true)
-        {
-            bool urlIsCorrect;
-            if (onlyCheckUrlStartsWithExpectedText)
-            {
-                urlIsCorrect = Driver.Url.StartsWith(PageUrl);
-            }
-            else
-            {
-                urlIsCorrect = Driver.Url == PageUrl;
-            }
-
-            bool pageHasLoaded = urlIsCorrect && (Driver.Title == PageTitle);
-
-            if (!pageHasLoaded)
-            {
-                throw new Exception($"Failed to load Home Page.\r\nPage URL = '{Driver.Url}'.\r\nPage Source: \r\n {Driver.PageSource}");
-            }
         }
     }
 }

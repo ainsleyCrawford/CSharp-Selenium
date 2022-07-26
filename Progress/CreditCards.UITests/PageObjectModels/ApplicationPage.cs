@@ -6,16 +6,16 @@ using System.Linq;
 
 namespace CreditCards.UITests.PageObjectModels
 {
-    class ApplicationPage
+    class ApplicationPage : Page
     {
-        private readonly IWebDriver Driver;
-        private const string PageUrl = "http://localhost:44108/Apply";
-        private const string PageTitle = "Credit Card Application - Credit Cards";
-
         public ApplicationPage(IWebDriver driver)
         {
             Driver = driver;
         }
+
+        protected override string PageUrl => "http://localhost:44108/Apply";
+        protected override string PageTitle => "Credit Card Application - Credit Cards";
+        protected override string DesiredPage => "Application";
 
         public ReadOnlyCollection<string> ValidationErrorMessages
         {
@@ -61,31 +61,6 @@ namespace CreditCards.UITests.PageObjectModels
         {
             Driver.FindElement(By.Id("SubmitApplication")).Click();
             return new ApplicationCompletePage(Driver);
-        }
-        public void NavigateTo()
-        {
-            Driver.Navigate().GoToUrl(PageUrl);
-            EnsurePageLoaded();
-        }
-
-        public void EnsurePageLoaded(bool onlyCheckUrlStartsWithExpectedText = true)
-        {
-            bool urlIsCorrect;
-            if (onlyCheckUrlStartsWithExpectedText)
-            {
-                urlIsCorrect = Driver.Url.StartsWith(PageUrl);
-            }
-            else
-            {
-                urlIsCorrect = Driver.Url == PageUrl;
-            }
-
-            bool pageHasLoaded = urlIsCorrect && (Driver.Title == PageTitle);
-
-            if (!pageHasLoaded)
-            {
-                throw new Exception($"Failed to load Application Page.\r\nPage URL = '{Driver.Url}'.\r\nPage Source: \r\n {Driver.PageSource}");
-            }
         }
     }
 }
