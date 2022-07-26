@@ -20,3 +20,13 @@ Test framework (NUnit) --> Test code (C#) <--> **POMs** <--> IWebDriver API (NuG
   - i.e., replace `driver.FindElement()`
 - Navigation between POMs
   - Each page has a POM
+
+### POM Considerations
+- Size
+  - e.g. a dashboard page could be very large
+  - Separate into Page Component Object Models
+- No Asserts or Exceptions
+  - Excepting page load verification
+  - `public void EnsurePageLoaded()`
+- Create reusable "user behaviour" methods
+  - `private void EnterApplicationDetails(default params)`
