@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 
@@ -41,18 +40,12 @@ namespace CreditCards.UITests.PageObjectModels
 
         public void EnterGrossAnnualIncome(string income) => Driver.FindElement(By.Id("GrossAnnualIncome")).SendKeys(income);
 
-        public void ChooseMaritalStatusSingle() => Driver.FindElement(By.Id("Single")).Click();
+        public void ChooseMaritalStatus(string relationshipStatus) => Driver.FindElement(By.Id(relationshipStatus)).Click();
 
-        public void ChooseBusinessSourceTV()
+        public void ChooseBusinessSource(string source)
         {
             SelectElement businessSource = new SelectElement(Driver.FindElement(By.Id("BusinessSource")));
-            businessSource.SelectByValue("TV");
-        }
-        
-        public void ChooseBusinessSourceEmail()
-        {
-            SelectElement businessSource = new SelectElement(Driver.FindElement(By.Id("BusinessSource")));
-            businessSource.SelectByValue("Email");
+            businessSource.SelectByValue(source);
         }
 
         public void AcceptTerms() => Driver.FindElement(By.Id("TermsAccepted")).Click();

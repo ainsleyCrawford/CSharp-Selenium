@@ -107,20 +107,20 @@ namespace CreditCards.UITests
         {
             using (IWebDriver driver = new ChromeDriver())
             {
-                const string FirstName = "Ainsley", LastName = "Crawford", Number = "123456-A", Age = "28", Income = "32000";
+                const string FirstName = "Ainsley", LastName = "Crawford", Number = "123456-A", Age = "28", Income = "32000", RelationshipStatus = "Single", Source = "TV";
 
-                var aplP = new ApplicationPage(driver);
-                aplP.NavigateTo();
+                var applicationPage = new ApplicationPage(driver);
+                applicationPage.NavigateTo();
 
-                aplP.EnterFirstName(FirstName);
-                aplP.EnterLastName(LastName);
-                aplP.EnterFrequentFlyerNumber(Number);
-                aplP.EnterAge(Age);
-                aplP.EnterGrossAnnualIncome(Income);
-                aplP.ChooseMaritalStatusSingle();
-                aplP.ChooseBusinessSourceTV();
-                aplP.AcceptTerms();
-                ApplicationCompletePage applicationCompletePage = aplP.SubmitApplication();
+                applicationPage.EnterFirstName(FirstName);
+                applicationPage.EnterLastName(LastName);
+                applicationPage.EnterFrequentFlyerNumber(Number);
+                applicationPage.EnterAge(Age);
+                applicationPage.EnterGrossAnnualIncome(Income);
+                applicationPage.ChooseMaritalStatus(RelationshipStatus);
+                applicationPage.ChooseBusinessSource(Source);
+                applicationPage.AcceptTerms();
+                ApplicationCompletePage applicationCompletePage = applicationPage.SubmitApplication();
 
                 applicationCompletePage.EnsurePageLoaded();
 
@@ -130,14 +130,14 @@ namespace CreditCards.UITests
                 Assert.Equal(Age, applicationCompletePage.Age);
                 Assert.Equal(Income, applicationCompletePage.Income);
                 Assert.Equal("Single", applicationCompletePage.RelationshipStatus);
-                Assert.Equal("TV", applicationCompletePage.BusinessSource);
+                Assert.Equal(Source, applicationCompletePage.BusinessSource);
             }
         }
 
         [Fact]
         public void BeSubmittedWhenValidationErrorsCorrected()
         {
-            const string FirstName = "Ainsley", LastName = "Crawford", InvalidAge = "17", ValidAge = "28", Income = "32000";
+            const string FirstName = "Ainsley", LastName = "Crawford", InvalidAge = "17", ValidAge = "28", Income = "32000", RelationshipStatus = "Defacto", Source = "Email";
 
             using (IWebDriver driver = new ChromeDriver())
             {
@@ -149,8 +149,8 @@ namespace CreditCards.UITests
                 applicationPage.EnterFrequentFlyerNumber("123456-A");
                 applicationPage.EnterAge(InvalidAge);
                 applicationPage.EnterGrossAnnualIncome(Income);
-                applicationPage.ChooseMaritalStatusSingle();
-                applicationPage.ChooseBusinessSourceEmail();
+                applicationPage.ChooseMaritalStatus(RelationshipStatus);
+                applicationPage.ChooseBusinessSource(Source);
                 applicationPage.AcceptTerms();
                 applicationPage.SubmitApplication();
 
@@ -174,8 +174,8 @@ namespace CreditCards.UITests
                 Assert.Equal($"{FirstName} {LastName}", applicationCompletePage.FullName);
                 Assert.Equal(ValidAge, applicationCompletePage.Age);
                 Assert.Equal(Income, applicationCompletePage.Income);
-                Assert.Equal("Single", applicationCompletePage.RelationshipStatus);
-                Assert.Equal("Email", applicationCompletePage.BusinessSource);
+                Assert.Equal("De-facto", applicationCompletePage.RelationshipStatus);
+                Assert.Equal(Source, applicationCompletePage.BusinessSource);
             }
         }
     }
